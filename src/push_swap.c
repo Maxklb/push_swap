@@ -5,10 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 16:07:50 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/03 16:08:10 by makoch-l         ###   ########.fr       */
+/*   Created: 2024/05/06 18:02:34 by makoch-l          #+#    #+#             */
+/*   Updated: 2024/05/06 18:22:15 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
+int	main(int argc, char **argv)
+{
+	
+}
