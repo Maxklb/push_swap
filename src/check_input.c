@@ -6,13 +6,13 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:13:43 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/08 18:17:42 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/08 19:10:58 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static int arg_is_number(char *arg)
+int	arg_is_number(char *arg)
 {
 	int i;
 
@@ -26,7 +26,7 @@ static int arg_is_number(char *arg)
 	return (1);
 }
 
-static int arg_has_duplicates(char **args, int size)
+int	arg_has_duplicates(char **args, int size)
 {
 	int i;
 	int j;
