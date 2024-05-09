@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 16:06:07 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/09 16:21:08 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/09 18:23:38 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,16 @@
 
 typedef struct s_stack
 {
-
+	int	number;
+	int	i;
+	struct s_stack	*next;
 }	t_stack;
 
 // ### OPERATIONS ###
 
-
+void	swap_a(t_stack *stack_a);
+void	swap_b(t_stack *stack_b);
+void	swap_stack(t_stack *stack_a, t_stack *stack_b);
 
 // ### INPUT CHECK ###
 

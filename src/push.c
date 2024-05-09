@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/09 16:15:44 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/09 16:39:23 by makoch-l         ###   ########.fr       */
+/*   Created: 2024/05/09 16:40:41 by makoch-l          #+#    #+#             */
+/*   Updated: 2024/05/09 16:42:59 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static void	swap(t_stack *stack)
+static void	push
 {
 	
 }
 
-void	swap_a(t_stack *stack_a)
+void	push_a(t_stack **stack_a, t_stack **stack_b)
 {
-	swap(*stack_a);
-	ft_putstr("sa\n");
+	push(*stack_a, *stack_b);
+	ft_putstr("pa\n");
 }
 
-void	swap_b(t_stack *stack_b)
+void	push_b(t_stack **stack_a, t_stack **stack_b)
 {
-	swap(*stack_b);
-	ft_putstr("sb\n");
-}
-
-void	swap_stack(t_stack *stack_a, t_stack *stack_b)
-{
-	swap(*stack_a);
-	swap(*stack_b);
-	ft_putstr("ss\n");
+	push(*stack_b, *stack_a);
+	ft_putstr("pb\n");
 }
