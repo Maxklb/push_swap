@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 16:15:44 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/09 16:39:23 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/09 18:55:59 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 static void	swap(t_stack *stack)
 {
-	
+	int	tmp;
+
+	if (!stack || !stack->next)
+		return ;
 }
 
 void	swap_a(t_stack *stack_a)

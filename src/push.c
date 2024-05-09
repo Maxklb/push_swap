@@ -6,15 +6,22 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 16:40:41 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/09 16:42:59 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/09 18:56:14 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static void	push
+static void	push(t_stack **src, t_stack **dst)
 {
-	
+	t_stack	*tmp;
+
+	if (!*src)
+		return ;
+	tmp = (*src)->next;
+	(*src)->next = *dst;
+	*dst = *src;
+	*src = tmp;
 }
 
 void	push_a(t_stack **stack_a, t_stack **stack_b)

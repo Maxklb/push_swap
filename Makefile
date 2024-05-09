@@ -6,7 +6,7 @@
 #    By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 15:45:07 by makoch-l          #+#    #+#              #
-#    Updated: 2024/05/03 16:04:40 by makoch-l         ###   ########.fr        #
+#    Updated: 2024/05/09 19:09:57 by makoch-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,12 @@ RM = rm -f
 
 ### SOURCE FILES ###
 
-SOURCES = 
-
+SOURCES = 	src/check_input_utils.c \
+			src/check_input.c \
+			src/push_swap.c \
+			src/push.c \
+			src/swap.c \
+			
 ### OBJECT FILES ###
 
 OBJECTS = $(SOURCES:.c=.o)
