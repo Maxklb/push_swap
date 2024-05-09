@@ -1,39 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 16:06:07 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/09 16:21:08 by makoch-l         ###   ########.fr       */
+/*   Created: 2024/05/09 16:15:44 by makoch-l          #+#    #+#             */
+/*   Updated: 2024/05/09 16:16:51 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "../include/push_swap.h"
 
-# include "../libft/libft.h"
-
-# include <stdlib.h>
-# include <unistd.h>
-# include <limits.h>
-# include <stdbool.h>
-
-typedef struct s_stack
+static void	swap(t_stack *stack)
 {
-
-}	t_stack;
-
-// ### OPERATIONS ###
-
-
-
-// ### INPUT CHECK ###
-
-int	ft_is_digit(int c);
-int	ft_is_sign(int c);
-int	ft_nb_str_cmp(char *s1, char *s2);
-int	ft_is_valid_input(char **args);
-
-#endif
+	
+}
