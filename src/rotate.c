@@ -6,9 +6,16 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 18:36:15 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/10 18:38:02 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/11 01:09:56 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
+static void rotate(t_stack *stack)
+{
+	int	tmp;
+	if(!stack || !stack->next)
+		return ;
+	
+}
