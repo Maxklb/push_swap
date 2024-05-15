@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 16:06:07 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/10 17:47:50 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/15 18:12:51 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,18 @@ void	swap_b(t_stack **stack_b);
 void	swap_stack(t_stack **stack_a, t_stack **stack_b);
 void	push_a(t_stack **stack_a, t_stack **stack_b);
 void	push_b(t_stack **stack_a, t_stack **stack_b);
+void	rotate_a(t_stack **stack_a);
+void	rotate_b(t_stack **stack_b);
+void	rotate_stack(t_stack **stack_a, t_stack **stack_b);
 
 // ### UTILS ###
 
 void	ft_putstr(char *str);
+
+// ### STACK UTILS ###
+
+int		get_stack_size(t_stack *stack);
+t_stack	*first_stack_element(t_stack *stack);
 
 // ### ERROR ###
 
@@ -51,6 +59,5 @@ int		ft_is_sign(int c);
 int		ft_nb_str_cmp(char *s1, char *s2);
 int		ft_is_valid_input(char **args);
 
-//int		main(int argc, char **argv);
 
 #endif

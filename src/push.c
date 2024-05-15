@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 16:40:41 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/10 23:25:15 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/15 18:56:42 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	push_b(t_stack **stack_a, t_stack **stack_b)
 	ft_putstr("pb\n");
 }
 
-int	main()
+/*int	main()
 {
 	// Creating a sample stack
 	t_stack	*stack_a = NULL;
@@ -106,4 +106,4 @@ int	main()
 	printf("stack_a: %d %d %d\n", stack_a->number, stack_a->next->number, stack_a->next->next->number);
 	printf("stack_b: %d %d %d\n", stack_b->number, stack_b->next->number, stack_b->next->next->number);
 	return (0);
-}
+}*/
