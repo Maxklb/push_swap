@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 16:06:07 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/15 18:12:51 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/16 15:28:30 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,9 @@ void	push_b(t_stack **stack_a, t_stack **stack_b);
 void	rotate_a(t_stack **stack_a);
 void	rotate_b(t_stack **stack_b);
 void	rotate_stack(t_stack **stack_a, t_stack **stack_b);
+void	reverse_rotate_a(t_stack **stack_a);
+void	reverse_rotate_b(t_stack **stack_b);
+void	reverse_rotate_stack(t_stack **stack_a, t_stack **stack_b);
 
 // ### UTILS ###
 

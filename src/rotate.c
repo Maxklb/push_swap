@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 18:36:15 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/15 19:04:47 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/16 15:27:03 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ static void	rotate(t_stack **stack)
 	t_stack	*last;
 
 	tmp = *stack;
-	*stack = (*stack)->next;
 	last = first_stack_element(*stack);
+	*stack = (*stack)->next;
 	tmp->next = NULL;
 	last->next = tmp;
 }
@@ -42,7 +42,7 @@ void	rotate_stack(t_stack **stack_a, t_stack **stack_b)
 	rotate(stack_b);
 	ft_putstr("rr\n");
 }
-/*
+
 int main() 
 {
     // Creating a sample stack
@@ -125,4 +125,4 @@ int main()
 	printf("After rotating stack\n");
 	printf("stack_a: %d %d %d\n", stack_a->number, stack_a->next->number, stack_a->next->next->number);
 	printf("stack_b: %d %d %d\n", stack_b->number, stack_b->next->number, stack_b->next->next->number);
-}*/
+}
