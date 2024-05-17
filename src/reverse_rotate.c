@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 18:36:35 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/16 15:29:24 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/17 14:45:25 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 static void	reverse_rotate(t_stack **stack)
 {
 	t_stack	*tmp;
-	t_stack	*last;
 
 	tmp = *stack;
-	last = first_stack_element(*stack);
 	while (tmp->next->next)
 		tmp = tmp->next;
 	tmp->next->next = *stack;

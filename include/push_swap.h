@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 16:06:07 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/16 15:28:30 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/17 15:17:53 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void	ft_putstr(char *str);
 // ### STACK UTILS ###
 
 int		get_stack_size(t_stack *stack);
+int		is_sorted(t_stack *stack);
 t_stack	*first_stack_element(t_stack *stack);
 
 // ### ERROR ###
