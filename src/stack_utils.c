@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 17:55:57 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/20 15:12:03 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/20 19:13:37 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ int	get_stack_size(t_stack *stack)
 
 int	is_sorted(t_stack *stack)
 {
-	while (stack && stack->next)
+	while (stack->next != NULL)
 	{
-		if (stack->number > stack->next->number)
+		if (stack->number > stack->next->number) 
 			return (0);
 		stack = stack->next;
 	}

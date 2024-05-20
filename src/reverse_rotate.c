@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 18:36:35 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/17 14:45:25 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/20 17:55:24 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	reverse_rotate_stack(t_stack **stack_a, t_stack **stack_b)
 	ft_putstr("rrr\n");
 }
 
-int main() 
+/*int main() 
 {
     // Creating a sample stack
     t_stack *stack_a = NULL;
@@ -125,4 +125,4 @@ int main()
 	printf("After reverse rotating stack\n");
 	printf("stack_a: %d %d %d\n", stack_a->number, stack_a->next->number, stack_a->next->next->number);
 	printf("stack_b: %d %d %d\n", stack_b->number, stack_b->next->number, stack_b->next->next->number);
-}
+}*/

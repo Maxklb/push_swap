@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 16:15:44 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/20 14:48:59 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/20 17:55:35 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	swap_stack(t_stack **stack_a, t_stack **stack_b)
 	ft_putstr("ss\n");
 }
 
-int main() 
+/*int main() 
 {
     // Creating a sample stack
     t_stack *stack_a = NULL;
@@ -129,4 +129,4 @@ int main()
     printf("stack_b: %d %d %d\n", stack_b->number, stack_b->next->number, stack_b->next->next->number);
 
     return 0;
-}
+}*/

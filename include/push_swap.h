@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 16:06:07 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/20 17:18:25 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/20 17:31:33 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,9 @@ int		get_stack_size(t_stack *stack);
 int		is_sorted(t_stack *stack);
 t_stack	*first_stack_element(t_stack *stack);
 
-// ### ERROR ###
+// ### SORTING ###
 
-
+void	small_sorting(t_stack **stack);
 
 // ### INPUT CHECK ###
 
