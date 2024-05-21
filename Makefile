@@ -6,7 +6,7 @@
 #    By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 15:45:07 by makoch-l          #+#    #+#              #
-#    Updated: 2024/05/17 15:08:53 by makoch-l         ###   ########.fr        #
+#    Updated: 2024/05/21 19:45:44 by makoch-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,40 +31,50 @@ OBJECTS = $(addprefix $(OBJ_PATH), $(OBJ))
 
 SOURCES = 	check_input_utils.c \
 			check_input.c \
-			push_swap.c \
 			push.c \
 			swap.c \
 			rotate.c \
 			reverse_rotate.c \
 			utils.c \
 			stack_utils.c \
-			
+			sorting.c \
+			small_sorting.c \
+
+### COLORS ###
+NOC		= \033[0m
+RED		= \033[1;31m
+GREEN	= \033[1;32m
+YELLOW	= \033[1;33m
+BLUE	= \033[1;34m
+WHITE	= \033[1;37m
+
 ### RULES ###
 
 all: $(OBJ_PATH) $(NAME)
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
-		$(CC) $(CFLAGS) -c $< -o $@
+		@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_PATH):
 		mkdir -p $(OBJ_PATH)
 
 $(NAME): $(OBJECTS)
-		make -C libft
-		$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
+		@make -C libft
+		@$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
 
 %.o: %.c
-		$(CC) -c $(CFLAGS) $?
+		@$(CC) -c $(CFLAGS) $?
 
 libft:
-		make -C libft
+		@make -C libft
 
 clean:
-		$(RM) $(OBJ_PATH)
-		make -C libft clean
+		@$(RM) $(OBJ_PATH)
+		@make -C libft clean
 
 fclean: clean
-		$(RM) $(NAME) libft/libft.a
+		@echo "$(RED)Deleting $(NAME)$(NOC)"
+		@$(RM) $(NAME) libft/libft.a
 
 re: fclean all
 

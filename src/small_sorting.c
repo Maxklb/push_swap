@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:26:34 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/20 19:54:47 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/21 17:08:00 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void print_stack(t_stack *stack)
     printf("\n");
 }
 
-int main() 
+/*int main() 
 {
 	t_stack *stack_a = NULL;
 
@@ -74,4 +74,4 @@ int main()
 	small_sorting(&stack_a);
 	print_stack(stack_a);
 	return 0;
-}
+}*/

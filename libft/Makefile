@@ -6,7 +6,7 @@
 #    By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/22 01:46:15 by makoch-l          #+#    #+#              #
-#    Updated: 2024/04/30 15:48:24 by makoch-l         ###   ########.fr        #
+#    Updated: 2024/05/21 19:45:59 by makoch-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ SRCS =  ft_atoi.c \
 OBJS = $(SRCS:.c=.o) 
 
 .c.o:
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+	@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra 
@@ -66,13 +66,13 @@ CFLAGS = -Wall -Werror -Wextra
 all : $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
 
 clean :
-	rm -f $(OBJS)
+	@rm -f $(OBJS)
 
 fclean : clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re : fclean $(NAME)
 
