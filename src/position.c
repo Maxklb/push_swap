@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 16:34:30 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/21 16:35:57 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/22 18:54:58 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ static void	get_position(t_stack **stack)
 		tmp = tmp->next;
 		i++;
 	}
+	return (i);
 }
