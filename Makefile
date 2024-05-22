@@ -6,7 +6,7 @@
 #    By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 15:45:07 by makoch-l          #+#    #+#              #
-#    Updated: 2024/05/22 17:58:15 by makoch-l         ###   ########.fr        #
+#    Updated: 2024/05/22 18:40:00 by makoch-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,19 +62,21 @@ $(OBJ_PATH):
 
 $(NAME): $(OBJECTS)
 		@echo "$(GREEN)Compiling $(NAME)$(NOC)"
-		@make -C libft
+		@make --no-print-directory -C libft
 		@$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
+		@echo "$(GREEN)$(NAME) compiled$(NOC)"
+		@echo "$(GREEN)$(NAME) ready to use$(NOC)"
 
 %.o: %.c
 		@$(CC) -c $(CFLAGS) $?
 
 libft:
-		@make -C libft
+		@make --no-print-directory -C libft
 
 clean:
 		@echo "$(RED)Deleting objects files$(NOC)"
 		@$(RM) $(OBJ_PATH)
-		@make -C libft clean
+		@make --no-print-directory -C libft clean
 
 fclean: clean
 		@echo "$(RED)Deleting $(NAME)$(NOC)"
