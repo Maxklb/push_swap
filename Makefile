@@ -6,7 +6,7 @@
 #    By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 15:45:07 by makoch-l          #+#    #+#              #
-#    Updated: 2024/05/21 19:45:44 by makoch-l         ###   ########.fr        #
+#    Updated: 2024/05/22 17:58:15 by makoch-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,9 +56,12 @@ $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 		@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_PATH):
-		mkdir -p $(OBJ_PATH)
+		@echo "$(GREEN)Creating $(OBJ_PATH)$(NOC)"
+		@mkdir -p $(OBJ_PATH)
+		@echo "$(GREEN)clang $(WHITE)$(CFLAGS)$(NOC)$(GREEN) flags used$(NOC)"
 
 $(NAME): $(OBJECTS)
+		@echo "$(GREEN)Compiling $(NAME)$(NOC)"
 		@make -C libft
 		@$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
 
@@ -69,6 +72,7 @@ libft:
 		@make -C libft
 
 clean:
+		@echo "$(RED)Deleting objects files$(NOC)"
 		@$(RM) $(OBJ_PATH)
 		@make -C libft clean
 

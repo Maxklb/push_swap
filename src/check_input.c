@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:13:43 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/09 16:18:35 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/22 17:50:41 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,18 @@ static int	arg_is_number(char *arg)
 	return (1);
 }
 
-static int	arg_has_duplicates(char **args, int size)
+static int	arg_has_duplicates(char **args)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	while (i < size)
+	while (args[i])
 	{
-		j = i + 1;
-		while (j < size)
+		j = 1;
+		while (args[j])
 		{
-			if (ft_atoi(args[i]) == ft_atoi(args[j]))
+			if (i != j && ft_nb_str_cmp(args[i], args[j]) == 0)
 				return (1);
 			j++;
 		}
@@ -73,7 +73,7 @@ int	ft_is_valid_input(char **args)
 			return (0);
 		i++;
 	}
-	if (arg_has_duplicates(args, i))
+	if (arg_has_duplicates(args))
 		return (0);
 	return (1);
 }
