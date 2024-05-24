@@ -6,13 +6,13 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:26:34 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/21 17:08:00 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/24 17:52:06 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static int find_highest_index(t_stack *stack)
+int find_highest_index(t_stack *stack)
 {
 	int i;
 

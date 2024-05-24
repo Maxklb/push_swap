@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:37:04 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/22 20:00:48 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/24 18:15:30 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,20 +39,21 @@ static void	push_a_to_b_except_three(t_stack **stack_a, t_stack	**stack_b)
 	}
 }
 
-static void	push_all_b_to_a(t_stack **stack_a, t_stack **stack_b)
+static void		shift_stack_and_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	int		stack_size;
 	int		i;
 
 	i = 0;
-	stack_size = get_stack_size(*stack_b);
+	stack_size = get_stack_size(*stack_a);
 	while (i < stack_size)
 	{
-		push_a(stack_a, stack_b);
-		// swap_b(stack_b);
+		push_b(stack_a, stack_b);
+		rotate_b(stack_b);
 		i++;
 	}
 }
+
 
 int main()
 {
@@ -122,13 +123,13 @@ int main()
 	printf("Stack B after :\n");
 	print_stack(stack_b);
 
-	printf("test push_all_to_a :\n");
+	printf("test shift_stack_and_sort :\n");
 
-	push_all_b_to_a(&stack_a, &stack_b);
-	
+	shift_stack_and_sort(&stack_a, &stack_b);
+
 	printf("Stack A after :\n");
 	print_stack(stack_a);
-	
+
 	printf("Stack B after :\n");
 	print_stack(stack_b);
 }
