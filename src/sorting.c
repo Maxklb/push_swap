@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:37:04 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/24 18:15:30 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/24 18:33:37 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ static void		shift_stack_and_sort(t_stack **stack_a, t_stack **stack_b)
 		rotate_b(stack_b);
 		i++;
 	}
+	i = get_stack_size(*stack_b);
 }
 
 
