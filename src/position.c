@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 16:34:30 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/22 18:54:58 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/28 14:49:53 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,20 @@ static void	get_position(t_stack **stack)
 		tmp = tmp->next;
 		i++;
 	}
-	return (i);
+}
+
+int	lowest_i_value(t_stack **stack)
+{
+	t_stack	*tmp;
+	int		lowest_i;
+
+	lowest_i = 0;
+	tmp = *stack;
+	while (tmp)
+	{
+		if (tmp->i < lowest_i)
+			lowest_i = tmp->i;
+		tmp = tmp->next;
+	}
+	return (lowest_i);
 }
