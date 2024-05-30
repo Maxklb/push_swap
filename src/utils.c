@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 17:35:43 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/20 17:14:47 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/30 15:46:20 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ int	nb_absolute(int nb)
 
 void	free_stack(t_stack **stack)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
-	if(*stack == NULL || stack == NULL)
+	if (*stack == NULL || stack == NULL)
 		return ;
 	while (*stack)
 	{

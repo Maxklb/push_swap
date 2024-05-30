@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 16:06:07 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/30 12:42:34 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/30 15:42:58 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ typedef struct s_stack
 {
 	int				number;
 	int				i;
+	int				position;
+	int				trgt_pos;
 	struct s_stack	*next;
 }	t_stack;
 
@@ -58,6 +60,11 @@ int		lowest_i_value(t_stack **stack);
 void	print_stack(t_stack *stack);
 t_stack	*first_stack_element(t_stack *stack);
 
+// ### POSITION ###
+
+int		lowest_i_value(t_stack **stack);
+void	position(t_stack **stack_a, t_stack **stack_b);
+
 // ### SORTING ###
 
 void	small_sorting(t_stack **stack);
@@ -69,6 +76,5 @@ int		ft_is_digit(int c);
 int		ft_is_sign(int c);
 int		ft_nb_str_cmp(char *s1, char *s2);
 int		ft_is_valid_input(char **args);
-
 
 #endif

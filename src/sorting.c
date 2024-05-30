@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:37:04 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/30 12:43:37 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/30 16:05:20 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	push_a_to_b_except_three(t_stack **stack_a, t_stack	**stack_b)
 	number = 0;
 	i = 0;
 	stack_size = get_stack_size(*stack_a);
-	while(stack_size > 6 && i < stack_size && number < stack_size / 2)
+	while (stack_size > 6 && i < stack_size && number < stack_size / 2)
 	{
 		if ((*stack_a)->i <= stack_size / 2)
 		{
@@ -41,15 +41,14 @@ static void	push_a_to_b_except_three(t_stack **stack_a, t_stack	**stack_b)
 
 static void	shift_stack(t_stack **stack_a)
 {
-	int stack_size;
-	int lowest_i;
+	int	stack_size;
+	int	lowest_i;
 
 	stack_size = get_stack_size(*stack_a);
 	lowest_i = lowest_i_value(stack_a);
-
-	if(lowest_i > stack_size / 2)
+	if (lowest_i > stack_size / 2)
 	{
-		while(lowest_i < stack_size)
+		while (lowest_i < stack_size)
 		{
 			reverse_rotate_a(stack_a);
 			lowest_i++;
@@ -57,7 +56,7 @@ static void	shift_stack(t_stack **stack_a)
 	}
 	else
 	{
-		while(lowest_i > 0)
+		while (lowest_i > 0)
 		{
 			rotate_a(stack_a);
 			lowest_i--;
@@ -69,7 +68,7 @@ void	sorting(t_stack **stack_a, t_stack **stack_b)
 {
 	push_a_to_b_except_three(stack_a, stack_b);
 	small_sorting(stack_a);
-	while(*stack_b)
+	while (*stack_b)
 	{
 		
 	}
@@ -77,7 +76,7 @@ void	sorting(t_stack **stack_a, t_stack **stack_b)
 		shift_stack(stack_a);
 }
 
-int main()
+/*int main()
 {
 	t_stack *stack_a = NULL;
 	t_stack *stack_b = NULL;
@@ -145,4 +144,4 @@ int main()
 
 	printf("Stack B after :\n");
 	print_stack(stack_b);
-}
+}*/

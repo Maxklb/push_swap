@@ -6,32 +6,30 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:26:34 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/24 17:52:06 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/30 15:49:12 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int find_highest_index(t_stack *stack)
+int	find_highest_index(t_stack *stack)
 {
-	int i;
+	int	i;
 
 	i = stack->i;
-	while(stack)
+	while (stack)
 	{
-		if(stack->i > i)
+		if (stack->i > i)
 			i = stack->i;
 		stack = stack->next;
 	}
 	return (i);
 }
 
-void small_sorting(t_stack **stack)
+void	small_sorting(t_stack **stack)
 {
-	int highest_index;
-	
-	// if (is_sorted(*stack))
-	// 	return ;
+	int	highest_index;
+
 	highest_index = find_highest_index(*stack);
 	if ((*stack)->i == highest_index)
 		rotate_a(stack);
@@ -41,14 +39,14 @@ void small_sorting(t_stack **stack)
 		swap_a(stack);
 }
 
-void print_stack(t_stack *stack) 
+void	print_stack(t_stack *stack)
 {
-    while (stack) 
+	while (stack)
 	{
-        printf("%d ", stack->i);
-        stack = stack->next;
-    }
-    printf("\n");
+		printf("%d ", stack->i);
+		stack = stack->next;
+	}
+	printf("\n");
 }
 
 /*int main() 
