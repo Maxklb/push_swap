@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:37:04 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/30 16:05:20 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:16:56 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	sorting(t_stack **stack_a, t_stack **stack_b)
 	small_sorting(stack_a);
 	while (*stack_b)
 	{
-		
+		position_b(stack_b, *stack_a);
 	}
 	if (!is_sorted(*stack_a))
 		shift_stack(stack_a);

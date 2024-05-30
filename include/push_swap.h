@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 16:06:07 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/30 15:42:58 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/30 19:45:44 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ typedef struct s_stack
 	int				i;
 	int				position;
 	int				trgt_pos;
+	int				move_cost_a;
+	int				move_cost_b;
 	struct s_stack	*next;
 }	t_stack;
 
