@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:37:04 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/28 14:07:17 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/30 12:43:37 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,52 @@ static void	push_a_to_b_except_three(t_stack **stack_a, t_stack	**stack_b)
 	}
 }
 
+static void	shift_stack(t_stack **stack_a)
+{
+	int stack_size;
+	int lowest_i;
 
+	stack_size = get_stack_size(*stack_a);
+	lowest_i = lowest_i_value(stack_a);
 
-/*int main()
+	if(lowest_i > stack_size / 2)
+	{
+		while(lowest_i < stack_size)
+		{
+			reverse_rotate_a(stack_a);
+			lowest_i++;
+		}
+	}
+	else
+	{
+		while(lowest_i > 0)
+		{
+			rotate_a(stack_a);
+			lowest_i--;
+		}
+	}
+}
+
+void	sorting(t_stack **stack_a, t_stack **stack_b)
+{
+	push_a_to_b_except_three(stack_a, stack_b);
+	small_sorting(stack_a);
+	while(*stack_b)
+	{
+		
+	}
+	if (!is_sorted(*stack_a))
+		shift_stack(stack_a);
+}
+
+int main()
 {
 	t_stack *stack_a = NULL;
 	t_stack *stack_b = NULL;
 
 	t_stack *node1 = malloc(sizeof(t_stack));
     node1->number = 1;
-    node1->i = 0;
+    node1->i = 78;
     node1->next = NULL;
     stack_a = node1;
 
@@ -72,7 +108,7 @@ static void	push_a_to_b_except_three(t_stack **stack_a, t_stack	**stack_b)
 
 	t_stack *node5 = malloc(sizeof(t_stack));
 	node5->number = 5;
-	node5->i = 4;
+	node5->i = 12;
 	node5->next = stack_a;
 	stack_a = node5;
 
@@ -101,6 +137,7 @@ static void	push_a_to_b_except_three(t_stack **stack_a, t_stack	**stack_b)
 
 	printf("test small_sorting :\n");
 	
+	shift_stack(&stack_a);
 	small_sorting(&stack_a);
 
 	printf("Stack A after :\n");
@@ -108,14 +145,4 @@ static void	push_a_to_b_except_three(t_stack **stack_a, t_stack	**stack_b)
 
 	printf("Stack B after :\n");
 	print_stack(stack_b);
-
-	printf("test shift_stack_and_sort :\n");
-
-	shift_stack_and_sort(&stack_a, &stack_b);
-
-	printf("Stack A after :\n");
-	print_stack(stack_a);
-
-	printf("Stack B after :\n");
-	print_stack(stack_b);
-}*/
+}
