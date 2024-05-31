@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 17:35:43 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/30 15:46:20 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 19:36:27 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,19 @@ void	free_stack(t_stack **stack)
 		return ;
 	while (*stack)
 	{
-		tmp = *stack;
-		*stack = (*stack)->next;
+		tmp = (*stack)->next;
 		free(tmp);
+		*stack = tmp;
 	}
 	*stack = NULL;
 }
 
 void	exit_error(t_stack **stack_a, t_stack **stack_b)
 {
-	free_stack(stack_a);
-	free_stack(stack_b);
+	if (stack_a == NULL || *stack_a != NULL)
+		free_stack(stack_a);
+	if (stack_b == NULL || *stack_b != NULL)
+		free_stack(stack_b);
 	ft_putstr("Error\n");
 	exit(1);
 }

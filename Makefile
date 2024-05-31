@@ -6,7 +6,7 @@
 #    By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 15:45:07 by makoch-l          #+#    #+#              #
-#    Updated: 2024/05/31 18:15:03 by makoch-l         ###   ########.fr        #
+#    Updated: 2024/05/31 19:28:56 by makoch-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,8 +24,11 @@ RM = rm -rf
 
 SRC_PATH = src/
 OBJ_PATH = obj/
+LIBFT_PATH = libft/
 OBJ = $(SOURCES:.c=.o)
 OBJECTS = $(addprefix $(OBJ_PATH), $(OBJ))
+
+LIBFT_OBJS = $(LIBFT_PATH)*.o
 
 ### SOURCE FILES ###
 
@@ -69,7 +72,7 @@ $(OBJ_PATH):
 $(NAME): $(OBJECTS)
 		@echo "$(GREEN)Compiling $(NAME)$(NOC)"
 		@make --no-print-directory -C libft
-		@$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
+		@$(CC) $(CFLAGS) $(OBJECTS) $(LIBFT_OBJS) -o $(NAME)
 		@echo "$(GREEN)$(NAME) compiled$(NOC)"
 		@echo "$(GREEN)$(NAME) ready to use$(NOC)"
 
