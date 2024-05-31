@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 18:18:15 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/31 15:42:29 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 18:07:37 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	find_best_move(t_stack **stack_a, t_stack **stack_b)
 	best_move = INT_MAX;
 	while(tmp)
 	{
-		if (nb_absolute(tmp->move_cost_a) + nb_absolute(tmp->move_cost_b) \ 
+		if (nb_absolute(tmp->move_cost_a) + nb_absolute(tmp->move_cost_b) 
 		< nb_absolute(best_move))
 		{
 			best_move = nb_absolute(tmp->move_cost_a) + nb_absolute(tmp->move_cost_b);
@@ -55,5 +55,5 @@ void	find_best_move(t_stack **stack_a, t_stack **stack_b)
 		}
 		tmp = tmp->next;
 	}
-	move_stack(stack_a, stack_b, move_cost_a, move_cost_b);
+	move(stack_a, stack_b, move_cost_a, move_cost_b);
 }

@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:26:34 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/31 15:31:51 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 17:47:29 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,4 @@ void	small_sorting(t_stack **stack)
 		reverse_rotate_a(stack);
 	if ((*stack)->i > (*stack)->next->i)
 		swap_a(stack);
-}
-
-void	print_stack(t_stack *stack)
-{
-	while (stack)
-	{
-		printf("%d ", stack->i);
-		stack = stack->next;
-	}
-	printf("\n");
 }

@@ -6,15 +6,15 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:36:40 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/22 17:49:27 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 18:48:32 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long int	ft_atoi(const char *str)
 {
-	int	result;
+	long int	result;
 	int	sign;
 	int	i;
 

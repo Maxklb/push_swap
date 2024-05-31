@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 19:15:56 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/22 17:45:28 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 18:48:40 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		print_percent(void);
 int		print_pointer(unsigned long long ptr);
 int		print_string(char *str);
 int		print_unsigned(unsigned int nb);
-int		ft_atoi(const char *str);
+long int		ft_atoi(const char *str);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
