@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:26:34 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/30 15:49:12 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 15:31:51 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,28 +48,3 @@ void	print_stack(t_stack *stack)
 	}
 	printf("\n");
 }
-
-/*int main() 
-{
-	t_stack *stack_a = NULL;
-
-	t_stack *node1 = malloc(sizeof(t_stack));
-	node1->i = 1;
-	node1->next = NULL;
-	stack_a = node1;
-
-	t_stack *node2 = malloc(sizeof(t_stack));
-	node2->i = 3;
-	node2->next = NULL;
-	stack_a->next = node2;
-
-	t_stack *node3 = malloc(sizeof(t_stack));
-	node3->i = 2;
-	node3->next = NULL;
-	stack_a->next->next = node3;
-	
-	print_stack(stack_a);
-	small_sorting(&stack_a);
-	print_stack(stack_a);
-	return 0;
-}*/

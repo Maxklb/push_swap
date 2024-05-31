@@ -6,7 +6,7 @@
 #    By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 15:45:07 by makoch-l          #+#    #+#              #
-#    Updated: 2024/05/30 15:11:46 by makoch-l         ###   ########.fr        #
+#    Updated: 2024/05/31 15:46:38 by makoch-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,8 @@ SOURCES = 	check_input_utils.c \
 			small_sorting.c \
 			position.c \
 			stack.c \
+			move.c \
+			move_calculations.c \
 
 ### COLORS ###
 NOC		= \033[0m

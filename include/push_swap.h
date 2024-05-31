@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 16:06:07 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/30 19:45:44 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 15:42:13 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,12 @@ void	position(t_stack **stack_a, t_stack **stack_b);
 
 void	small_sorting(t_stack **stack);
 void	sorting(t_stack **stack_a, t_stack **stack_b);
+
+// ### MOVE CALCULATIONS ###
+
+void	calculate_move_costs(t_stack **stack_a, t_stack **stack_b);
+void	find_best_move(t_stack **stack_a, t_stack **stack_b);
+void	move(t_stack **stack_a, t_stack **stack_b, int cost_a, int cost_b);
 
 // ### INPUT CHECK ###
 
