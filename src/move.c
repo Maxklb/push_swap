@@ -6,13 +6,13 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 15:03:04 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/31 15:42:25 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/06/01 18:46:14 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static void rev_rot_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
+static void	rev_rot_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
 {
 	while (*cost_a < 0 && *cost_b < 0)
 	{
@@ -21,7 +21,8 @@ static void rev_rot_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
 		reverse_rotate_stack(a, b);
 	}
 }
-static void rot_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
+
+static void	rot_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
 {
 	while (*cost_a > 0 && *cost_b > 0)
 	{
@@ -31,11 +32,11 @@ static void rot_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
 	}
 }
 
-static void rot_a(t_stack **a, int *cost)
+static void	rot_a(t_stack **a, int *cost)
 {
 	while (*cost)
 	{
-		if(*cost > 0)
+		if (*cost > 0)
 		{
 			rotate_a(a);
 			(*cost)--;
@@ -48,11 +49,11 @@ static void rot_a(t_stack **a, int *cost)
 	}
 }
 
-static void rot_b(t_stack **b, int *cost)
+static void	rot_b(t_stack **b, int *cost)
 {
 	while (*cost)
 	{
-		if(*cost > 0)
+		if (*cost > 0)
 		{
 			rotate_b(b);
 			(*cost)--;

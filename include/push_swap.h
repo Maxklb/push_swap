@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 16:06:07 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/31 18:12:18 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/06/01 18:43:30 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int		is_sorted(t_stack *stack);
 int		find_highest_index(t_stack *stack);
 int		lowest_i_value(t_stack **stack);
 t_stack	*first_stack_element(t_stack *stack);
-t_stack *create_node(int value);
+t_stack	*create_node(int value);
 t_stack	*create_stack(int ac, char **av);
 void	add_node(t_stack **stack, t_stack *node);
 void	set_index(t_stack *stack_a, int stack_size);

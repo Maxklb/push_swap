@@ -6,15 +6,15 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 17:51:52 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/31 19:38:01 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/06/01 18:45:13 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-t_stack *create_node(int value)
+t_stack	*create_node(int value)
 {
-	t_stack *node;
+	t_stack	*node;
 
 	node = malloc(sizeof * node);
 	if (node == NULL)
@@ -31,18 +31,16 @@ t_stack *create_node(int value)
 
 void	add_node(t_stack **stack, t_stack *node)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
-	if (!stack || !node)
-		exit_error(stack, NULL);
+	if (!node)
+		return ;
 	if (!*stack)
 	{
 		*stack = node;
 		return ;
 	}
-	tmp = *stack;
-	while (tmp->next)
-		tmp = tmp->next;
+	tmp = first_stack_element(*stack);
 	tmp->next = node;
 }
 
@@ -70,8 +68,8 @@ t_stack	*create_stack(int ac, char **av)
 
 void	set_index(t_stack *stack_a, int stack_size)
 {
-	t_stack *ptr;
-	t_stack *highest;
+	t_stack	*ptr;
+	t_stack	*highest;
 	int		value;
 
 	while (--stack_size > 0)
@@ -92,7 +90,7 @@ void	set_index(t_stack *stack_a, int stack_size)
 			else
 				ptr = ptr->next;
 		}
-		if (highest)
+		if (highest != NULL)
 			highest->i = stack_size;
 	}
 }

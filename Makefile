@@ -6,7 +6,7 @@
 #    By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 15:45:07 by makoch-l          #+#    #+#              #
-#    Updated: 2024/05/31 19:28:56 by makoch-l         ###   ########.fr        #
+#    Updated: 2024/06/01 19:31:54 by makoch-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ NAME = push_swap
 ### COMPILATION ###
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g3
 RM = rm -rf
 
 ### INCLUDES ###

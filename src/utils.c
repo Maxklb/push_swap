@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 17:35:43 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/31 19:36:27 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/06/01 18:24:52 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ void	free_stack(t_stack **stack)
 {
 	t_stack	*tmp;
 
-	if (*stack == NULL || stack == NULL)
+	if (!(*stack) || !stack)
 		return ;
 	while (*stack)
 	{
 		tmp = (*stack)->next;
-		free(tmp);
+		free(*stack);
 		*stack = tmp;
 	}
 	*stack = NULL;

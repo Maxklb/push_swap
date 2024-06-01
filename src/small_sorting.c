@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:26:34 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/31 17:47:29 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/06/01 18:27:39 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	small_sorting(t_stack **stack)
 {
 	int	highest_index;
 
+	if (is_sorted(*stack))
+		return ;
 	highest_index = find_highest_index(*stack);
 	if ((*stack)->i == highest_index)
 		rotate_a(stack);

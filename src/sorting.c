@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:37:04 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/31 15:45:46 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/06/01 18:30:39 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	sorting(t_stack **stack_a, t_stack **stack_b)
 	small_sorting(stack_a);
 	while (*stack_b)
 	{
-		position(stack_b, stack_a);
+		position(stack_a, stack_b);
 		calculate_move_costs(stack_a, stack_b);
 		find_best_move(stack_a, stack_b);
 	}

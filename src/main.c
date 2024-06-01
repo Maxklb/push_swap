@@ -6,15 +6,15 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 18:51:15 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/31 18:43:02 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/06/01 18:45:24 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static void push_swap(t_stack **stack_a, t_stack **stack_b, int stack_size)
+static void	push_swap(t_stack **stack_a, t_stack **stack_b, int stack_size)
 {
-	if(stack_size == 2 && !is_sorted(*stack_a))
+	if (stack_size == 2 && !is_sorted(*stack_a))
 		swap_a(stack_a);
 	else if (stack_size == 3)
 		small_sorting(stack_a);
@@ -22,12 +22,12 @@ static void push_swap(t_stack **stack_a, t_stack **stack_b, int stack_size)
 		sorting(stack_a, stack_b);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 	int		stack_size;
-	
+
 	if (ac < 2)
 		return (0);
 	if (!ft_is_valid_input(av))
