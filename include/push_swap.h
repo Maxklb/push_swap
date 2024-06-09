@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 16:06:07 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/06/01 18:43:30 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/06/10 00:09:03 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	move(t_stack **stack_a, t_stack **stack_b, int cost_a, int cost_b);
 
 int		ft_is_digit(int c);
 int		ft_is_sign(int c);
-int		ft_nb_str_cmp(char *s1, char *s2);
+int		ft_nb_str_cmp(const char *s1, const char *s2);
 int		ft_is_valid_input(char **args);
 
 int		main(int ac, char **av);

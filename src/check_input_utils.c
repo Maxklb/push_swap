@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:11:17 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/09 16:17:44 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/06/10 00:08:35 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_is_sign(int c)
 	return (0);
 }
 
-int	ft_nb_str_cmp(char *s1, char *s2)
+int	ft_nb_str_cmp(const char *s1, const char *s2)
 {
 	int	i;
 	int	j;
@@ -48,5 +48,5 @@ int	ft_nb_str_cmp(char *s1, char *s2)
 		i++;
 		j++;
 	}
-	return (s1[i] - s2[j]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[j]);
 }

@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 17:35:43 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/06/09 23:01:10 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/06/10 00:22:08 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	free_stack(t_stack **stack)
 {
 	t_stack	*tmp;
 
-	if (!(*stack) || !stack)
+	if (!stack || !(*stack))
 		return ;
 	while (*stack)
 	{
