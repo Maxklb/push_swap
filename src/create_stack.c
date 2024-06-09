@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 17:51:52 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/06/01 18:45:13 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/06/09 23:09:11 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_stack	*create_node(int value)
 	t_stack	*node;
 
 	node = malloc(sizeof * node);
-	if (node == NULL)
+	if (!node)
 		return (NULL);
 	node->number = value;
 	node->i = 0;
@@ -62,6 +62,7 @@ t_stack	*create_stack(int ac, char **av)
 			stack = create_node((int)tmp);
 		else
 			add_node(&stack, create_node((int)tmp));
+		i++;
 	}
 	return (stack);
 }

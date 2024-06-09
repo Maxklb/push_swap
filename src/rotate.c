@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 18:36:15 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/05/31 15:30:58 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/06/09 22:46:18 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ static void	rotate(t_stack **stack)
 	t_stack	*tmp;
 	t_stack	*last;
 
+	if (!*stack || !(*stack)->next)
+		return ;
 	tmp = *stack;
-	last = first_stack_element(*stack);
 	*stack = (*stack)->next;
+	last = first_stack_element(*stack);
 	tmp->next = NULL;
 	last->next = tmp;
 }

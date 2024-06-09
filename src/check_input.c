@@ -6,7 +6,7 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:13:43 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/06/01 19:23:13 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/06/09 23:13:07 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	ft_is_valid_input(char **args)
 	int	test;
 
 	test = 0;
-	i = 0;
+	i = 1;
 	while (args[i])
 	{
 		if (!arg_is_number(args[i]))
