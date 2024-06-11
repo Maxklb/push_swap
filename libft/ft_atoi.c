@@ -6,13 +6,13 @@
 /*   By: makoch-l <makoch-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:36:40 by makoch-l          #+#    #+#             */
-/*   Updated: 2024/06/01 18:42:04 by makoch-l         ###   ########.fr       */
+/*   Updated: 2024/06/11 22:37:23 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long int	ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	long int	result;
 	int			sign;
